@@ -1,13 +1,9 @@
-def para(args=None):
-    if args is None:
-        args = []
+#!/usr/bin/env python3
 
-    if len(args) < 2:
-        print("none")
-    else:
-        for arg in reversed(args):
-            print(arg)
+import sys
 
-para()
-para(["coucou"])
-para(["Python", "piscine", "hello"])
+if len(sys.argv) < 3:
+    print("none")
+else:
+    for param in reversed(sys.argv[1:]):
+        print(param)

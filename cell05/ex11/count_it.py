@@ -1,12 +1,12 @@
-def count_it(parameters):
-    if len(parameters) == 0:
-        print("none")
-    else:
-        print(f"parameters: {len(parameters)}")
-        
-        for parameter in parameters:
-            print(f"{parameter}: {len(parameter)}")
+#!/usr/bin/env python3
 
-if __name__ == "__main__":
-    count_it([])
-    count_it(["Game", "of", "Thrones"])
+import sys
+
+if len(sys.argv) == 1:
+    print("none")
+else:
+    parameters = sys.argv[1:]
+    print(f"parameters: {len(parameters)}")
+    
+    for param in parameters:
+        print(f"{param}: {len(param)}")

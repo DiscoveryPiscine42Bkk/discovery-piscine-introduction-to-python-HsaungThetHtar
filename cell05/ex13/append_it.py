@@ -1,11 +1,10 @@
-def append_it(parameters):
-    if len(parameters) == 0:
-        print("none")
-    else:
-        for parameter in parameters:
-            if not parameter.endswith("ism"):
-                print(parameter + "ism")
+#!/usr/bin/env python3
 
-if __name__ == "__main__":
-    append_it([])
-    append_it(["parallel", "egoism", "human"])
+import sys
+
+if len(sys.argv) == 1:
+    print("none")
+else:
+    for param in sys.argv[1:]:
+        if not param.endswith("ism"):
+            print(param + "ism")

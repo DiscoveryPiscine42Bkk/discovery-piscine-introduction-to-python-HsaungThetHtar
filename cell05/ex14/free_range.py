@@ -1,13 +1,15 @@
-def free_range(parameters):
-    if len(parameters) != 2:
-        print("none")
-    else:
-        start = int(parameters[0])
-        end = int(parameters[1])
+#!/usr/bin/env python3
+
+import sys
+
+if len(sys.argv) != 3:
+    print("none")
+else:
+    try:
+        start = int(sys.argv[1])
+        end = int(sys.argv[2])
         
         array = list(range(start, end + 1))
         print(array)
-
-if __name__ == "__main__":
-    free_range([])
-    free_range(["10", "14"])
+    except ValueError:
+        print("none")

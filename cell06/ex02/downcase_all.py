@@ -1,15 +1,16 @@
+#!/usr/bin/env python3
 
-def downcase_it(string):
-    return string.lower()
+import sys
 
-def downcase_all(parameters):
-    if len(parameters) == 0:
+def downcase_it(text):
+    return text.lower()
+
+def main():
+    if len(sys.argv) < 2:
         print("none")
     else:
-        for parameter in parameters:
-            print(downcase_it(parameter))
+        for param in sys.argv[1:]:
+            print(downcase_it(param))
 
-
-downcase_all([])
-
-downcase_all(["HELLO WORLD", "I understood Arrays well!"])
+if __name__ == "__main__":
+    main()
