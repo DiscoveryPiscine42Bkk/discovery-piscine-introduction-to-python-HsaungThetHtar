@@ -1,13 +1,17 @@
-import sys
-def para(*args):
-    if len(args) == 0:
-        print("none")
-    else:
-        for i in range(len(args)):
-            a = args[i].upper()
-            print(f"{a}", end=" ")
-        print()  
+#!/usr/bin/env python3
 
-para()
-para("initiation")
-para('This exercise is quite easy!')
+import sys   
+if len(sys.argv) <= 1:
+    print("none")
+else:
+    parameter = sys.argv
+
+    for i in parameter[1::]:
+        print(i.upper(),end=" ")
+        
+
+
+
+    
+    
+

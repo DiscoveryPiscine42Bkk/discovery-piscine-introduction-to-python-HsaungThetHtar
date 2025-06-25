@@ -1,10 +1,7 @@
+#!/usr/bin/env python3
 import sys
-def para(*args):
-    if len(args) == 0:
-        print('none')
-    else:
-        print(f"{args[0]}")
+if len(sys.argv) > 1:
+    print(sys.argv[1])
+else:
+    print("none")
 
-    
-para()
-para( "Code Ninja", "Numerique", "42")
