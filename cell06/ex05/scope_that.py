@@ -10,3 +10,5 @@ print(my_variable)
 add_one(my_variable)
 
 print(my_variable)
+
+#The variable my_variable remains unchanged even after calling add_one()
